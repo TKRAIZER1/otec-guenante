@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTEC GUENANTE SpA | Capacitación y Consultoría</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ========== RESET Y BASE ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        /* ========== PATRÓN DE FONDO SUTIL ========== */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* ========== HEADER ========== */
+        header {
+            background: linear-gradient(135deg, #0d7c66 0%, #2ecc71 100%);
+            color: white;
+            padding: 2rem 0 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid rgba(255,255,255,0.3);
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .logo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .header-text h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .header-text .slogan {
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+
+        .header-right {
+            text-align: right;
+        }
+
+        .header-right .rut {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            background: rgba(255,255,255,0.15);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        /* ========== NAV ========== */
+        nav {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            margin-top: 1.5rem;
+            padding: 0.5rem 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 0.5rem 0;
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover {
+            border-bottom-color: white;
+            opacity: 0.9;
+        }
+
+        /* ========== SECTIONS GENERAL ========== */
+        section {
+            padding: 4rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #0d7c66;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px; height: 3px;
+            background-color: #0d7c66;
+            margin-top: 0.5rem;
+            margin-left: auto; margin-right: auto;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* ========== ABOUT (logo grande, frase solo abajo del logo) ========== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #334155;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .about-logo {
+            text-align: center;
+        }
+
+        .about-logo img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            border: 4px solid #2ecc71;
+        }
+
+        .about-logo .slogan-big {
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0d7c66;
+            letter-spacing: 1px;
+        }
+
+        /* ========== SERVICES ========== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(13, 124, 102, 0.08);
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(13, 124, 102, 0.15);
+        }
+
+        .service-card .service-image i {
+            transition: color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .service-card:hover .service-image i {
+            color: #0d7c66;
+        }
+
+        .service-card .service-image {
+            width: 100%;
+            height: 180px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            background: #f0f4f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-card .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .service-card .service-image i {
+            font-size: 3rem;
+            color: #94a3b8;
+        }
+
+        .service-card h3 {
+            color: #0d7c66;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card .description {
+            color: #475569;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .service-card .includes {
+            margin-top: 0.8rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid #f0f4f8;
+            font-size: 0.9rem;
+            color: #334155;
+        }
+
+        .service-card .includes strong {
+            color: #0d7c66;
+        }
+
+        .service-card .includes ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.3rem 0 0 0;
+        }
+
+        .service-card .includes ul li {
+            padding: 0.1rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .service-card .includes ul li::before {
+            content: "✓";
+            color: #2ecc71;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* ========== GALLERY ========== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            aspect-ratio: 16/9;
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* ========== MODAL ========== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(255,255,255,0.1);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .close-modal:hover {
+            transform: scale(1.2);
+        }
+
+        /* ========== ANIMATIONS ========== */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: #0d7c66;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        footer .footer-slogan {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 0.3rem;
+        }
+
+        footer .footer-rut {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 1rem;
+        }
+
+        footer .footer-copy {
+            font-size: 0.85rem;
+            opacity: 0.5;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 1rem;
+        }
+
+        /* ========== VISITOR COUNTER ========== */
+        .visitor-counter {
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.85rem;
+            color: #64748b;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            display: inline-block;
+            padding: 0.3rem 1.5rem;
+            margin: 0 auto 1rem;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-logo img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            .header-left {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .header-right {
+                text-align: center;
+                margin-top: 0.5rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            nav .container {
+                gap: 1rem;
+            }
+            nav a {
+                font-size: 0.85rem;
+            }
+            .header-text h1 {
+                font-size: 1.5rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .logo-placeholder {
+                width: 60px;
+                height: 60px;
+            }
+            .about-logo img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+            section {
+                padding: 2.5rem 0;
+            }
+            .about-logo img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        /* ========== CONTACT ========== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem 1.2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #0d7c66;
+            width: 2.5rem;
+            text-align: center;
+        }
+
+        .contact-item .label {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-item .value {
+            font-weight: 600;
+            color: #0d7c66;
+        }
+
+        .contact-buttons-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-whatsapp,
+        .btn-email {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            color: white;
+            text-align: center;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .btn-email {
+            background: #0d7c66;
+        }
+
+        .btn-email:hover {
+            background: #0a5e4e;
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(13, 124, 102, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .contact-item:hover {
+                transform: none;
+            }
+            .btn-whatsapp:hover,
+            .btn-email:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <div class="logo-placeholder">
+                    <img src="img/Otec.png" alt="OTEC GUENANTE">
+                </div>
+                <div class="header-text">
+                    <h1>OTEC GUENANTE SpA</h1>
+                    <div class="slogan">Capacitamos · Inspiramos · Transformamos</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="rut">RUT: 77.494.723-K</div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <a href="#about"><i class="fas fa-info-circle"></i> Sobre Nosotros</a>
+                <a href="#services"><i class="fas fa-graduation-cap"></i> Servicios</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== ABOUT (FRASE SOLO DEBAJO DEL LOGO) ========== -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <p class="section-subtitle">Comprometidos con la excelencia en capacitación y desarrollo organizacional</p>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p><strong>OTEC GUENANTE</strong> es una Organización Técnica de Capacitación especializada en formación y consultoría para el desarrollo organizacional.</p>
+                    <p>Ofrecemos cursos presenciales, online y e-learning en áreas clave como <strong>Ley Karin</strong>, clima laboral, liderazgo, gestión pública, inclusión, bienestar laboral y salud mental.</p>
+                </div>
+                <div class="about-logo">
+                    <img src="img/Otec.png" alt="OTEC GUENANTE - Logo">
+                    <div class="slogan-big">Capacitamos · Inspiramos · Transformamos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Nuestros Cursos y Servicios</h2>
+            <p class="section-subtitle">Formación de calidad para potenciar equipos y organizaciones</p>
+            <div class="services-grid">
+
+                <!-- 1. Jornadas de Bienestar Laboral y Autocuidado -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/Bienestar autocuidado.png" alt="Jornadas de Bienestar Laboral y Autocuidado" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-heart\'></i>';">
+                    </div>
+                    <h3>Jornadas de Bienestar Laboral y Autocuidado</h3>
+                    <div class="description">Experiencia integral orientada al fortalecimiento del bienestar en el trabajo.</div>
+                    <div class="includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>Talleres prácticos de autocuidado</li>
+                            <li>Estrategias de manejo del estrés</li>
+                            <li>Material de apoyo digital</li>
+                            <li>Certificación de participación</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Estatuto Administrativo Municipal -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/Estatuto administrativo municipal.png" alt="Estatuto Administrativo Municipal" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-landmark\'></i>';">
+                    </div>
+                    <h3>Estatuto Administrativo Municipal</h3>
+                    <div class="description">Formación dirigida a funcionarios municipales sobre normativa y gestión pública.</div>
+                    <div class="includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>Análisis de la ley vigente</li>
+                            <li>Casos prácticos municipales</li>
+                            <li>Guía de procedimientos</li>
+                            <li>Asesoría post-curso</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. Estatuto Administrativo -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/Estatuto administrativo.png" alt="Estatuto Administrativo" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-gavel\'></i>';">
+                    </div>
+                    <h3>Estatuto Administrativo</h3>
+                    <div class="description">Capacitación sobre derechos, deberes y responsabilidades en la administración pública.</div>
+                    <div class="includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>Manual del participante</li>
+                            <li>Simulaciones de casos</li>
+                            <li>Evaluación de conocimientos</li>
+                            <li>Certificado de aprobación</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4. Consultoría Organizacional -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/Consultoria Organizacional.png" alt="Consultoría Organizacional" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-building\'></i>';">
+                    </div>
+                    <h3>Consultoría Organizacional</h3>
+                    <div class="description">Asesorías en gestión de personas y desarrollo organizacional a medida.</div>
+                    <div class="includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>Diagnóstico organizacional</li>
+                            <li>Plan de mejora personalizado</li>
+                            <li>Acompañamiento en implementación</li>
+                            <li>Informe de resultados</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5. Cursos E-learning -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/Cursos.png" alt="Cursos E-learning" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-laptop\'></i>';">
+                    </div>
+                    <h3>Cursos E-learning</h3>
+                    <div class="description">Programas asincrónicos y sincrónicos con certificación y seguimiento personalizado.</div>
+                    <div class="includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>Plataforma virtual intuitiva</li>
+                            <li>Videoclases y materiales descargables</li>
+                            <li>Tutorías en línea</li>
+                            <li>Certificado digital</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 6. Inclusión y Enfoque de Género -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/Inclusion.png" alt="Inclusión y Enfoque de Género" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-people-arrows\'></i>';">
+                    </div>
+                    <h3>Inclusión y Enfoque de Género</h3>
+                    <div class="description">Formación en inclusión, diversidad, accesibilidad y equidad de género.</div>
+                    <div class="includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>Marco legal y conceptual</li>
+                            <li>Talleres de sensibilización</li>
+                            <li>Guía de buenas prácticas</li>
+                            <li>Plan de acción inclusivo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 7. Bienestar Laboral y Salud Mental -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/Bienestar laboral.png" alt="Bienestar Laboral y Salud Mental" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-brain\'></i>';">
+                    </div>
+                    <h3>Bienestar Laboral y Salud Mental</h3>
+                    <div class="description">Estrategias para promover bienestar, autocuidado y salud mental en el entorno laboral.</div>
+                    <div class="includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>Evaluación de clima laboral</li>
+                            <li>Programa de intervención</li>
+                            <li>Sesiones de apoyo psicológico</li>
+                            <li>Material de seguimiento</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 8. Gestión Pública y Atención de Usuarios -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/Gestion publica.png" alt="Gestión Pública y Atención de Usuarios" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-handshake\'></i>';">
+                    </div>
+                    <h3>Gestión Pública y Atención de Usuarios</h3>
+                    <div class="description">Capacitación para organismos públicos y municipios en atención ciudadana.</div>
+                    <div class="includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>Protocolos de atención</li>
+                            <li>Manejo de casos difíciles</li>
+                            <li>Herramientas de gestión</li>
+                            <li>Certificación de competencias</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 9. Liderazgo y Trabajo en Equipo -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/Liderazgo y trabajo.png" alt="Liderazgo y Trabajo en Equipo" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-users\'></i>';">
+                    </div>
+                    <h3>Liderazgo y Trabajo en Equipo</h3>
+                    <div class="description">Desarrollo de habilidades directivas, comunicación efectiva y liderazgo.</div>
+                    <div class="includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>Autodiagnóstico de liderazgo</li>
+                            <li>Dinámicas de equipo</li>
+                            <li>Plan de desarrollo personal</li>
+                            <li>Coaching individual</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 10. Clima Laboral y Riesgos Psicosociales -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/Clima laboral.png" alt="Clima Laboral y Riesgos Psicosociales" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-chart-line\'></i>';">
+                    </div>
+                    <h3>Clima Laboral y Riesgos Psicosociales</h3>
+                    <div class="description">Diagnóstico, intervención y fortalecimiento del ambiente laboral.</div>
+                    <div class="includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>Encuesta de clima laboral</li>
+                            <li>Análisis de riesgos psicosociales</li>
+                            <li>Plan de acción preventivo</li>
+                            <li>Informe ejecutivo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 11. Curso Ley Karin -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/Ley karin.png" alt="Curso Ley Karin" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-shield-halved\'></i>';">
+                    </div>
+                    <h3>Curso Ley Karin</h3>
+                    <div class="description">Capacitación sobre Ley N°21.643, prevención de acoso y violencia laboral.</div>
+                    <div class="includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>Marco legal completo</li>
+                            <li>Protocolos de actuación</li>
+                            <li>Simulación de casos</li>
+                            <li>Material de consulta</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GALLERY ========== -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">Galería de Trabajos Realizados</h2>
+            <p class="section-subtitle">Proyectos destacados en capacitación y desarrollo organizacional</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="img/trabajo 1.png" alt="Trabajo realizado 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/trabajo 2.png" alt="Trabajo realizado 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/trabajo 3.png" alt="Trabajo realizado 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/trabajo 4.png" alt="Trabajo realizado 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/trabajo 5.png" alt="Trabajo realizado 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/trabajo 6.png" alt="Trabajo realizado 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" style="background: linear-gradient(to bottom, #f0fcf8, #ffffff);">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <p class="section-subtitle">Estamos para ayudarte a potenciar tu equipo y organización</p>
+            <div class="contact-grid">
+                <!-- Columna izquierda: información -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <div class="label">Propietaria</div>
+                            <div class="value">Claudia Andrea Guenante Alarcón</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <div class="label">Teléfono</div>
+                            <div class="value">+569 8831 7134</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <div class="label">Correo Electrónico</div>
+                            <div class="value">otecguenante@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-location-dot"></i>
+                        <div>
+                            <div class="label">Dirección</div>
+                            <div class="value">Región del Biobío, Chile</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <div class="label">Horario de Atención</div>
+                            <div class="value">Lunes a viernes de 9:00 a 18:00 hrs.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna derecha: botones -->
+                <div class="contact-buttons-wrapper">
+                    <h3 style="color: #0d7c66; margin-bottom: 1.5rem; text-align: center;">Contáctanos directamente</h3>
+                    <a href="https://wa.me/56988317134?text=Hola%20OTEC%20GUENANTE%2C%20estoy%20interesado%20en%20sus%20servicios%20de%20capacitaci%C3%B3n." target="_blank" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Chatea con nosotros por WhatsApp
+                    </a>
+                    <a href="mailto:otecguenante@gmail.com?subject=Consulta%20sobre%20sus%20servicios&body=Hola%2C%20estoy%20interesado%20en%20recibir%20informaci%C3%B3n%20sobre%20sus%20cursos%20y%20servicios." class="btn-email">
+                        <i class="fas fa-envelope"></i> Envíanos un correo
+                    </a>
+                    <!-- Contador de visitas -->
+                    <div style="text-align:center; margin-top: 2rem;">
+                        <div class="visitor-counter">
+                            <i class="fas fa-eye" style="color:#0d7c66;"></i> Visitas: <span id="visit-counter">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <div class="footer-slogan">Capacitamos · Inspiramos · Transformamos</div>
+            <div class="footer-rut">RUT: 77.494.723-K</div>
+            <div class="footer-copy">© 2026 OTEC GUENANTE SpA. Todos los derechos reservados.</div>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Contador de visitas
+            let visits = localStorage.getItem('otec_visits');
+            if (visits === null) {
+                visits = 0;
+            }
+            visits = parseInt(visits) + 1;
+            localStorage.setItem('otec_visits', visits);
+            document.getElementById('visit-counter').textContent = visits;
+
+            // Smooth scroll
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Scroll Reveal Animation
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all elements with animate-on-scroll class
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Add animate-on-scroll class to main sections for scroll reveal effect
+            const mainSections = document.querySelectorAll('section');
+            mainSections.forEach(section => {
+                if (section.id !== 'contact') { // Skip contact section since it already has its own animation
+                    const title = section.querySelector('.section-title');
+                    if (title) {
+                        title.classList.add('animate-on-scroll');
+                    }
+                    
+                    const subtitle = section.querySelector('.section-subtitle');
+                    if (subtitle) {
+                        subtitle.classList.add('animate-on-scroll');
+                    }
+                }
+            });
+
+            // Add animate-on-scroll class to service cards
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach(card => {
+                card.classList.add('animate-on-scroll');
+            });
+
+            // Add animate-on-scroll class to gallery items
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            galleryItems.forEach(item => {
+                item.classList.add('animate-on-scroll');
+            });
+
+            // Add animate-on-scroll class to contact section elements
+            const contactElements = document.querySelectorAll('#contact .contact-item, #contact .contact-buttons-wrapper h3, #contact .btn-whatsapp, #contact .btn-email');
+            contactElements.forEach(el => {
+                el.classList.add('animate-on-scroll');
+            });
+
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.innerHTML = '<span class="close-modal">&times;</span><img class="modal-content" src="">';
+            document.body.appendChild(modal);
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const imgSrc = this.querySelector('img').src;
+                    modal.querySelector('.modal-content').src = imgSrc;
+                    modal.style.display = 'flex';
+                });
+            });
+
+            // Close modal when clicking on close button or outside the image
+            document.querySelector('.close-modal').addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
